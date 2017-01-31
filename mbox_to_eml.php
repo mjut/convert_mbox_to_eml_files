@@ -84,6 +84,7 @@ while($line = fgets($fh)){
 echo PHP_EOL."create {$counter} eml files.".PHP_EOL;
 
 function new_output_file_handle($line, $prefix_dir='./'){
+    date_default_timezone_set('Europe/Berlin');
     $list = preg_split('/ /', $line, 3);
     $id = $list[1];
     $time = strtotime($list[2]);
